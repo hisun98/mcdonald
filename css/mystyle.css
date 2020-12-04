@@ -1,0 +1,1113 @@
+*{
+			padding: 0;
+			margin: 0;
+		}
+		ul li, ol li{
+			list-style: none;
+			text-decoration: none;
+		}
+		html, body{
+			width: 100%;
+			height: 100%;
+		}
+		#wrapper{
+			width: 100%;
+			height: 500%;
+		}
+		#wrapper>section{
+			width: 100%;
+			height: 20%;
+			position: relative;
+			overflow: hidden;
+		}
+		#wrapper>section:nth-child(1){
+			background: url(img/main_2.png) no-repeat center;
+			background-size: cover;
+		}
+		#wrapper>section:nth-child(2){
+			/*background: url(img/yellow.png) no-repeat center;
+			background-size: cover;*/
+			background-color: #F4F2BD;
+		}
+		#wrapper>section:nth-child(3){
+			background: url(img/menu.png) no-repeat center;
+			background-size: cover;
+		}
+		#wrapper>section:nth-child(4){
+			/*background: url(img/yellow.png) no-repeat center;
+			background-size: cover;*/
+			background-color: #F4F2BD;
+		}
+		#wrapper>section:nth-child(5){
+			background: url(img/store.png) no-repeat center;
+			background-size: cover;
+		}
+		.black{
+			background-color: black;
+			opacity: 0.8;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 1;
+		}
+		/*GNB 캐릭터 네비*/
+		#main div{
+			text-indent: -999999px;
+		}
+		#main a{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		/*해피밀*/
+		.meal{
+			width: 600px;
+			height: 600px;
+			background: url(nav/gnb/meal.png) no-repeat;
+			animation: meal 3s steps(17) infinite;
+			cursor: pointer;
+			position: absolute;
+			z-index: 9;
+		}
+		@keyframes meal{
+			from{}
+			to{background-position: -10200px;}
+		}
+		.meal_box{
+			width: 600px;
+			height: 600px;
+			position: absolute;
+			bottom: 1px;
+			right: 7%;
+			z-index: 9;
+		}
+		.meal_box:hover{
+     	 	background: url(nav/gnb/meal_hover.png) no-repeat;
+			width: 600px;
+			height: 600px;
+		}
+		.meal_box:hover .meal{
+			opacity: 0;
+			animation-play-state: paused;
+		}
+		.meal_box span{
+			text-indent: 0;
+			position: absolute;
+			top:65px;
+			left: 300px;
+			animation: click 1s infinite; 
+			display: block;
+			color: black;
+			font-size: 20px;
+		}
+			@keyframes click{
+			0%{opacity: 1;}
+			50%{opacity:0;}
+			100%{opacity: 1;}
+		}
+		/*스토어*/
+		.board{
+			width: 500px;
+			height: 400px;
+			background: url(nav/gnb/board.png);
+			animation: board 1s steps(10) infinite;
+			opacity: 1;
+			position: absolute;
+			z-index: 98
+		}
+		@keyframes board{
+			from{}
+			to{background-position: -5000px;}
+		}
+		.board_box{
+      	width: 500px;
+      	height: 400px;
+      	position: absolute;
+      	animation: movve 1.8s infinite alternate linear;
+      	animation-fill-mode: forwards;
+      	cursor: pointer;
+      	bottom: 10px;
+      	z-index: 98
+      }
+      @keyframes movve{
+      	0%{left: 310px;}
+      	100%{left: 150px;}
+      }
+	    .board_box:hover{
+      	background: url(nav/gnb/board_hover.png);
+		animation-play-state: paused;
+		}
+		.board_box:hover .board{
+			opacity: 0;
+		}
+		.board_box span{
+			text-indent: 0;
+			position: absolute;
+			top:-10px;
+			left: 40%;
+			animation: click 1s infinite; 
+			display: block;
+			color: black;
+			font-size: 20px;
+		}
+		.board_box:hover{
+			animation-play-state: paused;
+		}
+		/*벤치*/
+		.chair{
+			width: 461px;
+			height: 260px;
+			background: url(nav/gnb/chair.png) no-repeat;
+			position: absolute;
+			top: 320px;
+			right: 50%;
+			margin-right: -230px;
+			z-index: 8;
+		}
+		/*메뉴*/
+		.menu{
+			width: 400px;
+			height: 300px;
+			background: url(nav/gnb/menu.png) no-repeat;
+			animation: menu 2s steps(8) infinite;
+			cursor: pointer;
+			position: absolute;
+			z-index: 9;
+		}
+		@keyframes menu{
+			from{}
+			to{background-position: -3200px;}
+		}
+		.menu_box{
+			position: absolute;
+			width: 400px;
+			height: 300px;
+			top: 205px;
+			right: 50%;
+			margin-right: -128px;
+			z-index: 9;
+		}
+		.menu_box:hover{
+     	 	background: url(nav/gnb/menu_hover.png) no-repeat;
+			width: 400px;
+			height: 300px;
+		}
+		.menu_box:hover .menu{
+			opacity: 0;
+			animation-play-state: paused;
+		}
+		.menu_box span{
+			text-indent: 0;
+			position: absolute;
+			top: -5px;
+			left: 160px;
+			animation: click 1s infinite; 
+			display: block;
+			color: black;
+			font-size: 20px;
+		}
+		/*브랜드*/
+		.brand{
+			width: 105px;
+			height: 100px;
+			background: url(nav/gnb/brand.png) no-repeat;
+			cursor: pointer;
+			position: absolute;
+			bottom: 0;
+			z-index: 9;
+		}
+		.brand_box{
+			position: absolute;
+			width: 105px;
+			height: 100px;
+			top: 408px;
+			left: 50%;
+			margin-left: 70px;
+			z-index: 9
+		}
+		.brand_box:hover{
+     	 	background: url(nav/gnb/brand_hover.png) no-repeat;
+			width: 105px;
+			height: 100px;
+		}
+		.brand_box:hover .brand{
+			opacity: 0;
+		}
+		.brand_box span{
+			text-indent: 0;
+			position: absolute;
+			animation: click 1s infinite; 
+			display: block;
+			color: black;
+			font-size: 20px;
+			top: -30px;
+			left: 12px;
+		}
+		/*감자튀김*/
+		.potato{
+			width: 300px;
+			height: 360px;
+			background: url(nav/gnb/potato.png) no-repeat;
+			animation: potato 1s steps(8) infinite;
+			position: absolute;
+			top: 100px;
+			right: 330px;
+		}
+		@keyframes potato{
+			from{}
+			to{background-position: -2400px;}
+		}
+		/*콜라*/
+		.coke{
+			width: 300px;
+			height: 380px;
+			background: url(nav/gnb/coke.png) no-repeat;
+			/*border: 1px solid red;*/
+			animation: coke 1s steps(8) infinite;
+			position: absolute;
+			top: 170px;
+			left :160px;
+		}
+		@keyframes coke{
+			from{}
+			to{background-position: -2400px;}
+		}
+		/*LNB 고정네비 시작*/
+		#lnb ul{
+			position: fixed;
+			z-index: 999;
+		}
+		#lnb ul li{
+			list-style: none;
+			text-indent: -999px;
+		}
+		#lnb a{
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		/*고정네비 메인*/
+		.lnb_main{
+			width: 150px;
+			height: 150px;
+			background: url(nav/lnb/lnb_main.png);
+			position: absolute;
+			top: 10px;
+			left: 30px;
+		}
+		.lnb_main:hover{
+			width: 150px;
+			height: 150px;
+			background: url(nav/lnb/lnb_main_hover.png);
+		}
+		.lnb_main.active_lnb a{
+			width: 150px;
+			height: 150px;
+			background: url(nav/lnb/lnb_main_hover.png);
+		}
+		/*고정네비 소개*/
+		.lnb_brand{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_brand.png);
+			position: absolute;
+			top: 200px;
+			left: 43px;
+		}
+		.lnb_brand:hover{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_brand_hover.png);
+		}
+		.lnb_brand.active_lnb a{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_brand_hover.png);
+		}
+		/*고정네비 메뉴*/
+		.lnb_menu{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_menu.png);
+			position: absolute;
+			top: 360px;
+			left: 43px;
+		}
+		.lnb_menu:hover{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_menu_hover.png);
+		}
+		.lnb_menu.active_lnb a{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_menu_hover.png);
+		}
+		/*고정네비 이벤트*/
+		.lnb_event{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_event.png);
+			position: absolute;
+			top: 520px;
+			left: 43px;
+		}
+		.lnb_event:hover{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_event_hover.png);
+		}
+		.lnb_event.active_lnb a{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_event_hover.png);
+		}
+		/*고정네비 스토어*/
+		.lnb_store{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_store.png);
+			position: absolute;
+			top: 680px;
+			left: 43px;
+		}
+		.lnb_store:hover{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_store_hover.png);
+		}
+		.lnb_store.active_lnb a{
+			width: 120px;
+			height: 100px;
+			background: url(nav/lnb/lnb_store_hover.png);
+		}
+		/*브 랜 드 2 번 째 페 이 지*/
+		/*뒷배경 햄버거판*/
+		.brand_pan{
+			width: 1343px;
+			height: 915px;
+			background: url(img/brand/brand_pan.png) no-repeat;
+			position: absolute;
+			left: 50%;
+			margin-left: -630px;
+			bottom: 25px;
+		}
+		.brand_story{
+			overflow: hidden;
+			width: 1220px;
+			height: 300px;
+			position: absolute;
+			top: 42%;
+			left: 5%;
+		}
+		.brand_story li{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 100%;
+		}
+		.brand_story li:nth-child(1){
+			background: url(img/brand/brand_story1.png);
+			left: 0;
+		}
+		.brand_story li:nth-child(2){
+			background: url(img/brand/brand_story2.png);
+		}
+		.brand_story li:nth-child(3){
+			background: url(img/brand/brand_story3.png);
+		}
+		/*캐로셀 버튼 시작*/
+		.brand_btn{
+			position: absolute;
+			bottom: 180px;
+			left: 45%;
+		}
+		.brand_btn li{
+			background-color: red;
+			width: 17px;
+			height: 17px;
+			float: left;
+			border-radius: 50%;
+			position: relative;
+			margin-left: 15px;
+			border: 1px solid black;
+			cursor: pointer;
+		}
+		.brand_btn li.active_brand{
+			background: yellow;
+		}
+		/*메 뉴 3 번 째 페 이 지 
+		/*메뉴판 판 판 판 판 */
+		.menu_pan{
+			width: 851px;
+			height: 426px;
+			background: url(img/menu/menu_pan.png) no-repeat;
+			position: absolute;
+			top: -6.5px;
+			right: 0;
+			z-index: 1;
+		}
+		.menu_pan span{
+			font-size: 1.5em;
+			color: black;
+			position: absolute;
+			left: 50%;
+			margin-left:-50px;
+			top: -20px;
+			animation: click 1s infinite;
+		}
+		/*메뉴 햄버거*/
+		.menu_pan>div:nth-child(1){
+			width: 320px;
+			height: 320px;
+			background: url(img/menu/menu_burger.png) no-repeat;
+			background-size: contain;
+			position: relative;
+			top: 60px;
+			left: 65px;
+			cursor: pointer;
+		}
+		.menu_pan>div:nth-child(1):hover{
+			width: 320px;
+			height: 320px;
+			background: url(img/menu/menu_burger_hover.png) no-repeat;
+			background-size: contain;
+		}
+		/*메뉴 해피밀*/
+		.menu_pan>div:nth-child(2){
+			width: 341px;
+			height: 227px;
+			background: url(img/menu/menu_morning.png) no-repeat;
+			position: absolute;
+			top: 115px;
+			right:  53px;
+			cursor: pointer;
+		}
+		.menu_pan>div:nth-child(2):hover{
+			background: url(img/menu/menu_morning_hover.png) no-repeat;
+		}
+		/*기계 들 */
+		.menu_machine{
+			width: 851px;
+			height: 709px;
+			background: url(img/menu/menu_machine.png) no-repeat;
+			position: absolute;
+			bottom: 164px;
+			left: 50%;
+			margin-left: -747px;
+		}
+		.menu_machine span{
+			font-size: 1.5em;
+			color: black;
+			position: absolute;
+			left: 50%;
+			animation: click 1s infinite;
+		}
+		/*콜라 콜라 콜라 콜라 콜라 */
+		.menu_machine>div:nth-child(1){
+			width: 199px;
+			height: 335px;
+			background: url(img/menu/menu_drink_ani.png) no-repeat ;
+			cursor: pointer;
+			position: absolute;
+			left: 112px;
+			bottom: 32px;
+			animation: drink 2s steps(25) infinite;
+		}
+		@keyframes drink{
+			from{}
+			to{background-position: -4961px;}
+		}
+		.menu_machine>div:nth-child(1):hover{
+			background: url(img/menu/menu_drink_hover.png) no-repeat;
+			clear: both;
+			animation: none;
+			background-position: bottom;
+		}	
+		.menu_machine>div:nth-child(1) span{
+		margin-left:-40px;
+			bottom: -30px;
+		}
+		/*아큼 아큼 아큼 아큼*/
+		.menu_machine>div:nth-child(2){
+			width: 227px;
+			height: 324px;
+			background: url(img/menu/menu_desserts_ani.png) no-repeat;
+			right: 105px;
+			bottom: 53.5px;
+			animation: soft 4s steps(68) infinite;
+			position: absolute;
+			cursor: pointer;
+		}
+		@keyframes soft{
+			from{}
+			to{background-position: -15421px;}
+		}
+		.menu_machine>div:nth-child(2):hover{
+			background: url(img/menu/menu_desserts_hover2.png) no-repeat;
+			animation: none;
+			background-position: bottom;
+		}
+		.menu_machine>div:nth-child(2) span{
+		margin-left:-40px;
+			bottom: -25px;
+		}
+		.menu_bar{
+			width: 1920px;
+			height: 270px;
+			background: url(img/menu/menu_bar.png) no-repeat;
+			position: absolute;
+			bottom: 0;
+			z-index: -1;
+		}
+		.menu_tray{
+			width: 440px;
+			height: 142px;
+			background: url(img/menu/menu_tray.png) no-repeat;
+			bottom: 30px;
+			right: 320px;
+			position: absolute;
+		}
+		.menu_tray>div{
+			width: 227px;
+			height: 256px;
+			background: url(img/menu/menu_side.png) no-repeat;
+			bottom: 30px;
+			right: 120px;
+			position: absolute;
+			cursor: pointer;
+		}
+		.menu_tray>div:hover{
+			background: url(img/menu/menu_side_hover.png) no-repeat;
+		}
+		.menu_tray>div span{
+			font-size: 1.5em;
+			color: lightgray;
+			position: absolute;
+			right: -45px;
+			bottom: 50px;
+			animation: click 1s infinite;
+		}
+		/*여기서부터는 햄버거 모달창*/
+		.menu_modal_burger{
+			width: 1446px;
+			height: 794px;
+			position: absolute;
+			background: url(img/menu/food/menu_modal.png) no-repeat;
+			z-index: 2;
+			top: 10%;
+			left: 15%;
+		}
+		.menu_modal_burger span{
+			color:#F60; 
+			font-size:100px; 
+			position:absolute; 
+			top:15px; 
+			right:80px;
+			display: block; 
+			cursor: pointer;
+			text-shadow: 1px 1px 2px gray;
+			z-index: 3;
+		}
+		.burger_img>div{
+			width: 1361px;
+			height: 709px;
+			position: absolute;
+			left: 3%;
+			top: 3%;
+		}
+		.burger_img>div:nth-of-type(1){
+			background: url(img/menu/food/b_1955.png) no-repeat;
+		}
+		.burger_img>div:nth-of-type(2){
+			background: url(img/menu/food/b_batod.png) no-repeat;
+		}
+		.burger_img>div:nth-of-type(3){
+			background: url(img/menu/food/b_bigmac.png) no-repeat;
+		}
+		.burger_img>div:nth-of-type(4){
+			background: url(img/menu/food/b_shanghai.png) no-repeat;
+		}
+		.burger_btn>div{
+			bottom: 70px;
+			width: 100px;
+			height: 75px;
+			position: absolute;
+			cursor: pointer;
+		}
+		.burger_btn>div:nth-of-type(1){
+			background: url(img/menu/food_pic/1955.png) no-repeat;
+			background-size: contain;
+			left: 7%;
+		}
+		.burger_btn>div:nth-of-type(2){
+			background: url(img/menu/food_pic/batod.png) no-repeat;
+			background-size: contain;
+			left: 17%;
+		}
+		.burger_btn>div:nth-of-type(3){
+			background: url(img/menu/food_pic/bigmac.png) no-repeat;
+			background-size: contain;
+			left: 27%;
+		}
+		.burger_btn>div:nth-of-type(4){
+			background: url(img/menu/food_pic/shang.png) no-repeat;
+			background-size: contain;
+			left: 37%;
+		}
+
+		/*여기서부터는 맥모닝 모달창*/
+
+		.menu_modal_macmoring{
+			width: 1446px;
+			height: 794px;
+			position: absolute;
+			background: url(img/menu/food/menu_modal.png) no-repeat;
+			z-index: 2;
+			top: 10%;
+			left: 15%;
+		}
+		.menu_modal_macmoring span{
+			color:#F60; 
+			font-size:100px; 
+			position:absolute; 
+			top:15px; 
+			right:80px;
+			display: block; 
+			cursor: pointer;
+			text-shadow: 1px 1px 2px gray;
+			z-index: 3;
+		}
+		.macmoring_img>div{
+			width: 1361px;
+			height: 709px;
+			position: absolute;
+			left: 3%;
+			top: 3%;
+		}
+		.macmoring_img>div:nth-of-type(1){
+			background: url(img/menu/food/m_bem.png) no-repeat;
+		}
+		.macmoring_img>div:nth-of-type(2){
+			background: url(img/menu/food/m_btm.png) no-repeat;
+		}
+		.macmoring_img>div:nth-of-type(3){
+			background: url(img/menu/food/m_ccm.png) no-repeat;
+		}
+		.macmoring_img>div:nth-of-type(4){
+			background: url(img/menu/food/m_sem.png) no-repeat;
+		}
+		.macmoring_btn>div{
+			bottom: 70px;
+			width: 100px;
+			height: 75px;
+			position: absolute;
+			cursor: pointer;
+		}
+		.macmoring_btn>div:nth-of-type(1){
+			background: url(img/menu/food_pic/baeggmu.png) no-repeat;
+			background-size: contain;
+			left: 7%;
+		}
+		.macmoring_btn>div:nth-of-type(2){
+			background: url(img/menu/food_pic/batomu.png) no-repeat;
+			background-size: contain;
+			left: 17%;
+		}
+		.macmoring_btn>div:nth-of-type(3){
+			background: url(img/menu/food_pic/chchmu.png) no-repeat;
+			background-size: contain;
+			left: 27%;
+		}
+		.macmoring_btn>div:nth-of-type(4){
+			background: url(img/menu/food_pic/hameggmu.png) no-repeat;
+			background-size: contain;
+			left: 37%;
+		}
+
+		/*여기서부터는 사이드 모달창*/
+
+		.menu_modal_side{
+			width: 1446px;
+			height: 794px;
+			position: absolute;
+			background: url(img/menu/food/menu_modal.png) no-repeat;
+			z-index: 2;
+			top: 10%;
+			left: 15%;
+		}
+		.menu_modal_side span{
+			color:#F60; 
+			font-size:100px; 
+			position:absolute; 
+			top:15px; 
+			right:80px;
+			display: block; 
+			cursor: pointer;
+			text-shadow: 1px 1px 2px gray;
+			z-index: 3;
+		}
+		.side_img>div{
+			width: 1361px;
+			height: 709px;
+			position: absolute;
+			left: 3%;
+			top: 3%;
+		}
+		.side_img>div:nth-of-type(1){
+			background: url(img/menu/food/h_ff.png) no-repeat;
+		}
+		.side_img>div:nth-of-type(2){
+			background: url(img/menu/food/h_ap.png) no-repeat;
+		}
+		.side_img>div:nth-of-type(3){
+			background: url(img/menu/food/h_mn.png) no-repeat;
+		}
+		.side_img>div:nth-of-type(4){
+			background: url(img/menu/food/h_stick.png) no-repeat;
+		}
+		.side_btn>div{
+			bottom: 70px;
+			width: 150px;
+			height: 105px;
+			position: absolute;
+			cursor: pointer;
+		}
+		.side_btn>div:nth-of-type(1){
+			background: url(img/menu/food_pic/frenchfries.png) no-repeat;
+			background-size: contain;
+			left: 7%;
+		}
+		.side_btn>div:nth-of-type(2){
+			background: url(img/menu/food_pic/applepie.png) no-repeat;
+			background-size: contain;
+			bottom: 60px;
+			left: 14%;
+		}
+		.side_btn>div:nth-of-type(3){
+			background: url(img/menu/food_pic/macnugget.png) no-repeat;
+			background-size: contain;
+			bottom: 50px;
+			left: 25%;
+		}
+		.side_btn>div:nth-of-type(4){
+			background: url(img/menu/food_pic/chocoo.png) no-repeat;
+			background-size: contain;
+			left: 37%;
+		}
+
+		/*여기서부터는 드링크 모달창*/
+
+		.menu_modal_drink{
+			width: 1446px;
+			height: 794px;
+			position: absolute;
+			background: url(img/menu/food/menu_modal.png) no-repeat;
+			z-index: 2;
+			top: 10%;
+			left: 15%;
+		}
+		.menu_modal_drink span{
+			color:#F60; 
+			font-size:100px; 
+			position:absolute; 
+			top:15px; 
+			right:80px;
+			display: block; 
+			cursor: pointer;
+			text-shadow: 1px 1px 2px gray;
+			z-index: 3;
+		}
+		.drink_img>div{
+			width: 1361px;
+			height: 709px;
+			position: absolute;
+			left: 3%;
+			top: 3%;
+		}
+		.drink_img>div:nth-of-type(1){
+			background: url(img/menu/food/d_cocacola.png) no-repeat;
+		}
+		.drink_img>div:nth-of-type(2){
+			background: url(img/menu/food/d_hc.png) no-repeat;
+		}
+		.drink_img>div:nth-of-type(3){
+			background: url(img/menu/food/d_vasha.png) no-repeat;
+		}
+		.drink_btn>div{
+			bottom: 70px;
+			width: 150px;
+			height: 105px;
+			position: absolute;
+			cursor: pointer;
+			bottom: 50px;
+
+		}
+		.drink_btn>div:nth-of-type(1){
+			background: url(img/menu/food_pic/cokeke.png) no-repeat;
+			background-size: contain;
+			left: 14%;
+		}
+		.drink_btn>div:nth-of-type(2){
+			background: url(img/menu/food_pic/hanlach.png) no-repeat;
+			background-size: contain;
+			left: 24%;
+		}
+		.drink_btn>div:nth-of-type(3){
+			background: url(img/menu/food_pic/banillash.png) no-repeat;
+			background-size: contain;
+			bottom: 50px;
+			left: 35%;
+		}
+
+		/*여기서부터는 디저트 모달창*/
+
+		.menu_modal_desserts{
+			width: 1446px;
+			height: 794px;
+			position: absolute;
+			background: url(img/menu/food/menu_modal.png) no-repeat;
+			z-index: 2;
+			top: 10%;
+			left: 15%;
+		}
+		.menu_modal_desserts span{
+			color:#F60; 
+			font-size:100px; 
+			position:absolute; 
+			top:15px; 
+			right:80px;
+			display: block; 
+			cursor: pointer;
+			text-shadow: 1px 1px 2px gray;
+			z-index: 3;
+		}
+		.desserts_img>div{
+			width: 1361px;
+			height: 709px;
+			position: absolute;
+			left: 3%;
+			top: 3%;
+		}
+		.desserts_img>div:nth-of-type(1){
+			background: url(img/menu/food/d_omf.png) no-repeat;
+		}
+		.desserts_img>div:nth-of-type(2){
+			background: url(img/menu/food/d_smf.png) no-repeat;
+		}
+		.desserts_img>div:nth-of-type(3){
+			background: url(img/menu/food/d_bmf.png) no-repeat;
+		}
+		.desserts_btn>div{
+			bottom: 70px;
+			width: 150px;
+			height: 105px;
+			position: absolute;
+			cursor: pointer;
+			bottom: 50px;
+
+		}
+		.desserts_btn>div:nth-of-type(1){
+			background: url(img/menu/food_pic/oremac.png) no-repeat;
+			background-size: contain;
+			left: 14%;
+		}
+		.desserts_btn>div:nth-of-type(2){
+			background: url(img/menu/food_pic/storemac.png) no-repeat;
+			background-size: contain;
+			left: 24.5%;
+		}
+		.desserts_btn>div:nth-of-type(3){
+			background: url(img/menu/food_pic/baoremac.png) no-repeat;
+			background-size: contain;
+			bottom: 50px;
+			left: 35%;
+		}
+
+		/*이 벤 트 4 번 째 페 이 지 event*/
+		.event_pan{
+			width: 1560px;
+			height: 709px;
+			background: url(img/event/event_pan.png) no-repeat;
+			position: absolute;
+			left: 50%;
+			margin-left: -700px;
+			top: -5px;
+		}
+		.event_pan span{
+			font-size: 1.5em;
+			color: darkgray;
+			position: absolute;
+			left: 50%;
+			margin-left:-50px;
+			top: -30px;
+			animation: click 1s infinite;
+		}
+		@keyframes click{
+			0%{opacity: 1}
+			70%{opacity: .5}
+			100%{opacity: 1}
+		}
+		/*빅맥송 이벤트*/
+		.event_pan>div:nth-of-type(1){
+			width: 503px;
+			height: 346px;
+			background: url(img/event/event_song.png) no-repeat;
+			position: absolute;
+			left: 50%;
+			margin-left: -650px;
+			top: 200px;
+			cursor: pointer;
+		}
+		.event_pan>div:nth-of-type(1):hover{
+			background: url(img/event/event_song_hover.png) no-repeat;		
+		}
+		/*이달의 해피밀*/
+		.event_pan>div:nth-of-type(2){
+			width: 374px;
+			height: 446px;
+			background: url(img/event/event_meal.png);
+			position: absolute;
+			left: 50%;
+			margin-left: -120px;
+			top: 120px;
+			cursor: pointer;
+		}
+		.event_pan>div:nth-of-type(2):hover{
+			background: url(img/event/event_meal_hover.png);		
+		}
+		/*음료수 이벤트*/
+		.event_pan>div:nth-of-type(3){
+			width: 322px;
+			height: 421px;
+			background: url(img/event/event_drink.png);
+			position: absolute;
+			left: 50%;
+			margin-left: 300px;
+			top: 180px;
+			cursor: pointer;
+		}
+		.event_pan>div:nth-of-type(3):hover{
+			background: url(img/event/event_drink_hover.png);		
+		}
+		.event_bigmacsong_modal{
+			background: url(img/event/event_song_modal.png);
+			width: 1400px;
+			height: 710px;
+			position: absolute;
+			z-index: 2;
+			top: 13%;
+			left: 50%;
+			margin-left: -620px;
+		}
+		.event_bigmacsong_modal span{
+			color:#F60; 
+			font-size:60px; 
+			position:absolute; 
+			right: 40px;
+			display: block; 
+			cursor: pointer;
+			text-shadow: 1px 1px 2px gray;
+			z-index: 3;
+		}
+		/*종료된 이벤트로 모달지움*/
+		/*.event_happy_modal{
+			background: url(img/event/event_happy_modal.png);
+			width: 1400px;
+			height: 710px;
+			position: absolute;
+			z-index: 2;
+			top: 20%;
+		}*/
+		.event_drink_modal{
+			background: url(img/event/event_drink_modal.png);
+			width: 1400px;
+			height: 710px;
+			position: absolute;
+			z-index: 2;
+			top: 13%;
+			left: 50%;
+			margin-left: -620px;
+		}
+		.event_drink_modal span{
+			color:#296CD8; 
+			font-size:60px; 
+			position:absolute; 
+			right: 40px;
+			display: block; 
+			cursor: pointer;
+			text-shadow: 1px 1px 2px gray;
+			z-index: 3;
+		}
+		/*이벤트창에 있는 의자 테이블*/
+		.sit{
+			width: 1350px;
+			height: 300px;
+			background: url(img/event/event_sit.png) no-repeat;
+			position: absolute;
+			left: 50%;
+			margin-left: -675px;
+			bottom: 0;
+		}
+		/*스 토 어 5 번 째 페 이 지 store*/
+		/*모니터*/
+		.store_moni{
+			width: 1265px;
+			height: 894px;
+			background: url(img/store/store_moniter.png);
+			position: absolute;
+			left: 50%;
+			margin-left: -740px;
+			top :3%;
+		}
+		.store_moni iframe{
+			position: absolute;
+			left: 4.3%;
+			top: 4.3%;
+			border-radius: 4%;
+		}
+		/*햄버거*/
+		.store_cha_board_box{
+	      	width: 500px;
+	      	height: 400px;
+	      	position: absolute;
+	      	animation: movve2 0.7s infinite alternate linear;
+	      	animation-fill-mode: forwards;
+	      	bottom: -10px;
+      	}
+    	@keyframes movve2{
+		  	0%{right: -10px;}
+		  	100%{right: 20px;}
+    	}
+		.store_cha_board{
+			width: 500px;
+			height: 400px;
+			background: url(nav/gnb/board.png);
+			animation: board 1s steps(10) infinite;
+			position: absolute;
+		}
+		@keyframes board{
+			from{}
+			to{background-position: -5000px;}
+		}
+		/*말 풍 선 풍 풍 풍 풍 풍*/
+		.store_drive_pung{
+			width: 280px;
+			height: 405px;
+			background: url(img/store/store_drive.png);
+			position: absolute;
+			left: 50%;
+			margin-left: -117px;
+			bottom: 400px;
+			cursor: pointer;
+		}
+		.store_store_pung{
+			width: 280px;
+			height: 405px;
+			background: url(img/store/store_store.png);
+			position: absolute;
+			left: 50%;
+			margin-left: -117px;
+			bottom: 400px;
+			cursor: pointer;
+		}
